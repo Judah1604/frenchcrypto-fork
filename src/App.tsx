@@ -1,15 +1,19 @@
 import "react";
 import './main.css'
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import Home from "./Components/Home/Home";
 import Dashboard from "./pages/User/Dashboard";
 import Overview from "./pages/User/overview/Overview";
 import TopNav from "./pages/User/TopNav";
 
 function App() {
+    const pathname = useLocation().pathname
+
 	return (
 		<div className="text-white h-full">
-			<div className="wrapper">
+			<div className={
+				pathname.includes("/user") ? "wrapper" : ""
+			}>
 				<Dashboard />
 				<div className="content">
 					<TopNav />

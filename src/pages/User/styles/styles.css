@@ -235,6 +235,7 @@
 .overview .personal .wallet .toggles .toggle.active,
 .overview .personal .bot .toggles .toggle.active {
   background-color: #0A1223;
+  border-color: #0A1223;
   color: white;
 }
 .overview .personal .wallet .price,
